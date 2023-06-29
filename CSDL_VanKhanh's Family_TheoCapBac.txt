@@ -1,0 +1,150 @@
+CREATE 
+
+(ongngoai:BAC_MOT{hoVaTen:"Lê Tiến Phượng", gioiTinh:"Nam", tinhTrang:"Đã chết", tuoiKhiChet: 53}),
+(bangoai:BAC_MOT{hoVaTen:"Nguyễn Thị Nhuận", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 63}),
+
+(di1:BAC_HAI{hoVaTen:"Lê Thị Hằng", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 49}),
+(di2:BAC_HAI{hoVaTen:"Nguyễn Thị Hạnh", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 47}),
+(me:BAC_HAI{hoVaTen:"Lê Thị Hà", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 43}),
+(cau3:BAC_HAI{hoVaTen:"Lê Tiến Hướng", gioiTinh:"Nam", tinhTrang:"Đã chết", tuoiKhiChet: 7}),
+
+(chiho1di1:BAC_BA{hoVaTen:"Nguyễn Thị Thủy", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 6}),
+(chiho2di1:BAC_BA{hoVaTen:"Nguyễn Thị Sáng", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 3}),
+
+(chiho1di2:BAC_BA{hoVaTen:"Phùng Thị Hoài Thương", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 22}),
+(anhho2di2:BAC_BA{hoVaTen:"Phùng Viết Trường", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 17}),
+(chiho3di2:BAC_BA{hoVaTen:"Phùng Thị Anh Thư", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 6}),
+
+(toi:BAC_BA{hoVaTen:"Nguyễn Thị Vân Khánh", tuoi: 20, gioiTinh:"Nữ", chieuCao: 1.58, canNang: 42}),
+(em1:BAC_BA{hoVaTen:"Nguyễn Thị Hồng Nhung", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 12}),
+(em2:BAC_BA{hoVaTen:"Nguyễn Công Sơn", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 6}),
+
+(me)-[:ME]-> (toi),
+(me)-[:ME]-> (em1),
+(me)-[:ME]-> (em2),
+
+(bangoai)-[:ME]-> (me),
+(bangoai)-[:ME]-> (di1),
+(bangoai)-[:ME]-> (di2),
+(bangoai)-[:ME]-> (cau3),
+(ongngoai)-[:BO]-> (me),
+(ongngoai)-[:BO]-> (di1),
+(ongngoai)-[:BO]-> (di2),
+(ongngoai)-[:BO]-> (cau3),
+
+(di1)-[:CHIGAI]-> (me),
+(di2)-[:CHIGAI]-> (me),
+(cau3)-[:EMTRAI]-> (me),
+
+(chiho1di1)-[:CONGAI]-> (di1),
+(chiho2di1)-[:CONGAI]-> (di1),
+
+(chiho1di2)-[:CONGAI]-> (di2),
+(anhho2di2)-[:CONTRAI]-> (di2),
+(chiho3di2)-[:CONGAI]-> (di2),
+
+
+(ongnoi:BAC_MOT{hoVaTen:"Nguyễn Công Tạo", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 75}),
+(banoi:BAC_MOT{hoVaTen:"Nguyễn Thị Lý", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 75}),
+
+(bac1:BAC_HAI{hoVaTen:"Nguyễn Công Hóa", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 59}),
+(bac2:BAC_HAI{hoVaTen:"Nguyễn Công Hòa", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 55}),
+(bac3:BAC_HAI{hoVaTen:"Nguyễn Công Thỏa", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 52}),
+(bo:BAC_HAI{hoVaTen:"Nguyễn Công Thuận", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 47}),
+(chu5:BAC_HAI{hoVaTen:"Nguyễn Công Thú", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 43}),
+(co6:BAC_HAI{hoVaTen:"Nguyễn Thị Trọng", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 39}),
+(chu7:BAC_HAI{hoVaTen:"Nguyễn Công Tâm", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 35}),
+
+
+(anhho1bac1:BAC_BA{hoVaTen:"Nguyễn Công Qúy", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 34}),
+(chiho2bac1:BAC_BA{hoVaTen:"Nguyễn Thị Vân", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 29}),
+
+(chiho1bac2:BAC_BA{hoVaTen:"Nguyễn Thị Liên", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 29}),
+(anhho2bac2:BAC_BA{hoVaTen:"Nguyễn Công Hợp", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 26}),
+(chiho3bac2:BAC_BA{hoVaTen:"Nguyễn Thị Thương", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 24}),
+(chiho4bac2:BAC_BA{hoVaTen:"Nguyễn Thị Thảo", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 19}),
+(chiho5bac2:BAC_BA{hoVaTen:"Nguyễn Thị Nguyệt Ánh", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 16}),
+
+(anhho1bac3:BAC_BA{hoVaTen:"Nguyễn Công Nam", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 23}),
+(chiho2bac3:BAC_BA{hoVaTen:"Nguyễn Thị Phương Linh", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 15}),
+
+(emho1chu5:BAC_BA{hoVaTen:"Nguyễn Công Thọ", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 17}),
+(emho2chu5:BAC_BA{hoVaTen:"Nguyễn Thị Yến Nhi", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 10}),
+
+(emho1co6:BAC_BA{hoVaTen:"Đặng Quang Lương", gioiTinh:"Nam", tinhTrang:"Còn sống", tuoi: 15}),
+
+(emho1chu7:BAC_BA{hoVaTen:"Nguyễn Thị Bảo Ngọc", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 8}),
+(emho2chu7:BAC_BA{hoVaTen:"Nguyễn Thị Bảo Minh", gioiTinh:"Nữ", tinhTrang:"Còn sống", tuoi: 4}),
+
+(ongnoi)-[:BO]->(bo),
+(ongnoi)-[:BO]->(bac1),
+(ongnoi)-[:BO]->(bac2),
+(ongnoi)-[:BO]->(bac3),
+(ongnoi)-[:BO]->(chu5),
+(ongnoi)-[:BO]->(co6),
+(ongnoi)-[:BO]->(chu7),
+(banoi)-[:ME]->(bo),
+(banoi)-[:ME]->(bac1),
+(banoi)-[:ME]->(bac2),
+(banoi)-[:ME]->(bac3),
+(banoi)-[:ME]->(chu5),
+(banoi)-[:ME]->(co6),
+(banoi)-[:ME]->(chu7),
+(bac1)-[:ANHTRAI]->(bo),
+(bac2)-[:ANHTRAI]->(bo),
+(bac3)-[:ANHTRAI]->(bo),
+(chu5)-[:EMTRAI]->(bo),
+(co6)-[:EMGAI]->(bo),
+(chu7)-[:EMTRAI]->(bo),
+
+
+(bo)-[:BO]-> (toi),
+(bo)-[:BO]-> (em1),
+(bo)-[:BO]-> (em2),
+
+(anhho1bac1)-[:CONTRAI]->(bac1),
+(chiho2bac1)-[:CONGAI]->(bac1),
+
+(chiho1bac2)-[:CONGAI]->(bac2),
+(anhho2bac2)-[:CONTRAI]->(bac2),
+(chiho3bac2)-[:CONGAI]->(bac2),
+(chiho4bac2)-[:CONGAI]->(bac2),
+(chiho5bac2)-[:CONGAI]->(bac2),
+
+(anhho1bac3)-[:CONTRAI]->(bac3),
+(chiho2bac3)-[:CONGAI]->(bac3),
+
+(emho1chu5)-[:CONTRAI]->(chu5),
+(emho2chu5)-[:CONGAI]->(chu5),
+
+(emho1co6)-[:CONTRAI]->(co6),
+
+(emho1chu7)-[:CONGAI]->(chu7),
+(emho2chu7)-[:CONGAI]->(chu7),
+
+(me)-[:KET_HON]->(bo),
+
+MATCH(toi:BAC_BA{hoVaTen:"Nguyễn Thị Vân Khánh"})
+SET toi:DUONG_SU_KHAM_BENH
+RETURN toi
+
+
+MATCH(nu:BAC_HAI)
+WHERE nu.gioiTinh="Nữ"
+SET nu:NU_GIOI
+RETURN nu
+
+MATCH(nu:BAC_BA)
+WHERE nu.gioiTinh="Nữ"
+SET nu:NU_GIOI
+RETURN nu
+
+MATCH(nam:BAC_BA)
+WHERE nam.gioiTinh="Nam"
+SET nam:NAM_GIOI
+RETURN nam
+
+MATCH(nam:BAC_HAI)
+WHERE nam.gioiTinh="Nam"
+SET nam:NAM_GIOI
+RETURN nam
